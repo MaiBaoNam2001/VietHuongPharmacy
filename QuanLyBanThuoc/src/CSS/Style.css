@@ -1,0 +1,37 @@
+.btnEntity{
+	-fx-text-fill: #ffffff;
+	-fx-background-color: #0000ff;
+	-fx-background-insets: 0,0,0,0;
+	-fx-background-radius: 5px;
+}
+.btnEntity:hover{
+	-fx-background-color: #0040ff;
+}
+.btnEntity:pressed{
+	-fx-text-fill: #0000ff;
+	-fx-background-color: #ffffff;
+	-fx-border-radius: 5px;
+	-fx-border-color: #0000ff;
+	-fx-border-width: 1px;
+}
+.pnlUser{
+	-fx-border-radius: 10px;
+	-fx-border-color: #0000ff;
+	-fx-border-width: 2px;
+}
+.btnSearch{
+	-fx-background-image: url("../Images/search_filled_12px.png");
+	-fx-background-color: transparent;
+	-fx-background-size: 12px 12px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-background-insets: 0,0,0,0;
+}
+.btnUnsearch{
+	-fx-background-image: url("../Images/delete_sign_12px.png");
+	-fx-background-color: transparent;
+	-fx-background-size: 12px 12px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+	-fx-background-insets: 0,0,0,0;
+}

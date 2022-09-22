@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="711.0" prefWidth="1148.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.BillCreationController">
+   <children>
+      <AnchorPane layoutX="421.0" prefHeight="91.0" prefWidth="306.0">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/scales_80px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="105.0" layoutY="21.0" style="-fx-text-fill: #0000ff;" text="Viet Huong Pharmacy">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="51.0" style="-fx-text-fill: #0000ff;" text="Lập hóa đơn bán">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="91.0" prefHeight="246.0" prefWidth="1148.0">
+         <children>
+            <GridPane layoutX="54.0" layoutY="14.0" vgap="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.00000610351563" minWidth="10.0" prefWidth="97.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.59999999999997" minWidth="10.0" prefWidth="189.59999999999997" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="42.39999999999998" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="73.60000000000002" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.60000000000002" minWidth="10.0" prefWidth="61.60002441406249" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.79998779296875" minWidth="10.0" prefWidth="42.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="293.6" minWidth="10.0" prefWidth="293.6" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.20000000000005" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.79999999999995" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.199951171875" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.59997558593739" minWidth="10.0" prefWidth="42.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Mã hóa đơn:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Ngày lập:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBillID" prefHeight="26.0" prefWidth="213.0" GridPane.columnIndex="1" />
+                  <DatePicker fx:id="dpkCreatedDate" prefHeight="26.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Nhân viên:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmployeeName" editable="false" focusTraversable="false" mouseTransparent="true" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Khách hàng:" GridPane.columnIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Địa chỉ:" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Số điện thoại:" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerName" prefHeight="26.0" prefWidth="307.0" GridPane.columnIndex="7" />
+                  <TextField fx:id="txtPhoneNumber" prefHeight="26.0" prefWidth="306.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtAddress" prefHeight="26.0" prefWidth="305.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="54.0" layoutY="110.0" vgap="5.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.00000610351563" minWidth="10.0" prefWidth="97.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.59999999999997" minWidth="10.0" prefWidth="189.59999999999997" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.20001220703125" minWidth="10.0" prefWidth="42.39999999999998" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="73.60000000000002" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.60000000000002" minWidth="10.0" prefWidth="61.60002441406249" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.79998779296875" minWidth="10.0" prefWidth="42.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="118.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="42.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="86.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.199951171875" minWidth="10.0" prefWidth="78.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.59997558593739" minWidth="10.0" prefWidth="42.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="75.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Tra cứu theo:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbxSearchType" onAction="#handleSearchType" prefHeight="26.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Thuốc tìm thấy:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbxFoundDrug" onAction="#handleFoundDrug" prefHeight="26.0" prefWidth="223.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Đơn vị tính:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUnit" editable="false" focusTraversable="false" mouseTransparent="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label text="Đơn giá bán (VND):" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUnitPrice" editable="false" focusTraversable="false" mouseTransparent="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                  <Label text="Số lượng bán:" GridPane.columnIndex="9" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSellQuantity" prefHeight="26.0" prefWidth="90.0" text="1" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+                  <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleAdd" prefHeight="65.0" prefWidth="74.0" styleClass="btnEntity" text="Thêm" GridPane.columnIndex="12" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tbvBill" layoutX="55.0" layoutY="317.0" prefHeight="215.0" prefWidth="1038.0">
+        <columns>
+          <TableColumn fx:id="colDrugName" prefWidth="336.80001068115234" text="Tên thuốc" />
+          <TableColumn fx:id="colUnit" prefWidth="173.59994506835938" text="Đơn vị tính" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="195.99993896484375" text="Đơn giá bán (VND)" />
+            <TableColumn fx:id="colQuantity" prefWidth="135.20001220703125" text="Số lượng" />
+            <TableColumn fx:id="colMoney" prefWidth="194.4000000000001" text="Thành tiền (VND)" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="55.0" layoutY="550.0" prefHeight="134.0" prefWidth="1038.0" styleClass="pnlUser">
+         <children>
+            <GridPane layoutX="19.0" layoutY="13.0" vgap="8.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="170.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="117.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="170.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="170.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Tổng tiền (VND):">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSubTotal" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" mouseTransparent="true" text="0" GridPane.columnIndex="1" />
+                  <Label text="Thuế GTGT (%):" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtVAT" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" mouseTransparent="true" text="5%" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Tổng tiền thanh toán (VND):" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTotalPayment" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" mouseTransparent="true" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Tiền nhận (VND):" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="Tiền thối lại (VND):" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtReceivedMoney" alignment="CENTER_RIGHT" GridPane.columnIndex="4" />
+                  <TextField fx:id="txtExchange" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" mouseTransparent="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button fx:id="btnAddNewBill" mnemonicParsing="false" onAction="#handleAddNewBill" prefHeight="30.0" prefWidth="243.0" styleClass="btnEntity" text="Thêm hóa đơn mới" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Button fx:id="btnPrintBill" mnemonicParsing="false" onAction="#handlePrintBill" prefHeight="30.0" prefWidth="243.0" styleClass="btnEntity" text="In hóa đơn" GridPane.columnIndex="6" />
+                  <Button fx:id="btnSaveBill" mnemonicParsing="false" onAction="#handleSaveBill" prefHeight="30.0" prefWidth="243.0" styleClass="btnEntity" text="Lưu thông tin hóa đơn" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Button fx:id="btnBack" mnemonicParsing="false" onAction="#handleBack" prefHeight="30.0" prefWidth="243.0" styleClass="btnEntity" text="Quay lại" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
